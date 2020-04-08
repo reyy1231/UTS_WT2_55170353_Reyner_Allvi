@@ -1,0 +1,450 @@
+<div *ngIf="error">Mata kuliah yang anda pilih Missing! {{ this.id }} is not available</div>
+<mat-tab-group>
+<form>
+  <mat-tab label="Akutansi"> 
+    
+  <h1></h1>
+  <mat-form-field appearance="outline">
+    <mat-label>Jurusan Anda</mat-label>
+      <mat-select matNativeControl name="jurusan" id="jurusan" [(ngModel)]="hero.jurusan">
+        <mat-option value="Akutansi">
+          Akutansi
+          </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+  <mat-form-field appearance="outline">
+  <mat-label>Mata Kuliah Anda</mat-label>
+    <input matInput placeholder="Ketik Matkul anda" name="kuliah" id="kuliah" [(ngModel)]="hero.kuliah" />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Dosen Pilihan Anda</mat-label>
+    <input matInput placeholder="Ketik nama dosen anda" name="dosen" id="dosen" [(ngModel)]="hero.dosen" />
+   </mat-form-field>
+   
+  <mat-form-field appereance="outline">
+    <mat-label>Semester Anda</mat-label>
+    <mat-select matNativeControl name="semester" id="semester" [(ngModel)]="hero.semester">
+      <mat-option value="Semester 1">
+        Semester 1
+      </mat-option>
+      <mat-option value="Semester 2">
+        Semester 2
+      </mat-option>
+      <mat-option value="Semester 3">
+        Semester 3
+      </mat-option>
+      <mat-option value="Semester 4">
+        Semester 4
+      </mat-option>
+      <mat-option value="Semester 5">
+        Semester 5
+      </mat-option>
+      <mat-option value="Semester 6">
+        Semester 6
+      </mat-option>
+      <mat-option value="Semester 7">
+        Semester 7
+      </mat-option>
+      <mat-option value="Semester 8">
+        Semester 8
+      </mat-option>
+    </mat-select>
+    </mat-form-field>
+
+  <mat-form-field appereance="outline">
+    <mat-label>Tahun Akademik anda</mat-label>
+    <input matInput placeholder="Ketik tahun akademik anda" name="angkatan" id="angkatan" [(ngModel)]="hero.angkatan" />
+    </mat-form-field>
+
+
+  <div class="buttons">
+    <div *ngIf="update">
+      <button mat-raised-button color="warn" (click)="deleteHero()">
+        delete
+      </button>
+      <button mat-raised-button color="primary" (click)="updateHero()">
+        update
+      </button>
+    </div>
+    <div *ngIf="!update">
+      <button mat-raised-button (click)="postHero()" color="primary">
+        post
+      </button>
+    </div>
+  </div>
+</mat-tab>
+  <br />
+  <mat-tab label="Ilmu Administrasi Business">
+    <h1></h1>
+    <mat-form-field appearance="outline">
+      <mat-label>Jurusan Anda</mat-label>
+        <mat-select matNativeControl name="jurusan" id="jurusan" [(ngModel)]="hero.jurusan">
+          <mat-option value="Ilmu Administrasi Business">
+            Ilmu Administrasi Business
+            </mat-option>
+          </mat-select>
+      </mat-form-field>
+  
+    <mat-form-field appearance="outline">
+    <mat-label>Mata Kuliah Anda</mat-label>
+      <input matInput placeholder="Ketik Matkul anda" name="kuliah" id="kuliah" [(ngModel)]="hero.kuliah" />
+    </mat-form-field>
+  
+    <mat-form-field appearance="outline">
+      <mat-label>Dosen Pilihan Anda</mat-label>
+      <input matInput placeholder="Ketik nama dosen anda" name="dosen" id="dosen" [(ngModel)]="hero.dosen" />
+     </mat-form-field>
+     
+    <mat-form-field appereance="outline">
+      <mat-label>Semester Anda</mat-label>
+      <mat-select matNativeControl name="semester" id="semester" [(ngModel)]="hero.semester">
+        <mat-option value="Semester 1">
+          Semester 1
+        </mat-option>
+        <mat-option value="Semester 2">
+          Semester 2
+        </mat-option>
+        <mat-option value="Semester 3">
+          Semester 3
+        </mat-option>
+        <mat-option value="Semester 4">
+          Semester 4
+        </mat-option>
+        <mat-option value="Semester 5">
+          Semester 5
+        </mat-option>
+        <mat-option value="Semester 6">
+          Semester 6
+        </mat-option>
+        <mat-option value="Semester 7">
+          Semester 7
+        </mat-option>
+        <mat-option value="Semester 8">
+          Semester 8
+        </mat-option>
+      </mat-select>
+      </mat-form-field>
+  
+    <mat-form-field appereance="outline">
+      <mat-label>Tahun Akademik anda</mat-label>
+      <input matInput placeholder="Ketik tahun akademik anda" name="angkatan" id="angkatan" [(ngModel)]="hero.angkatan" />
+      </mat-form-field>
+  
+  
+    <div class="buttons">
+      <div *ngIf="update">
+        <button mat-raised-button color="warn" (click)="deleteHero()">
+          delete
+        </button>
+        <button mat-raised-button color="primary" (click)="updateHero()">
+          update
+        </button>
+      </div>
+      <div *ngIf="!update">
+        <button mat-raised-button (click)="postHero()" color="primary">
+          post
+        </button>
+      </div>
+    </div>
+</mat-tab>
+  <br />
+  <mat-tab label="Ilmu Komunikasi">
+    <h1></h1>
+    <mat-form-field appearance="outline">
+      <mat-label>Jurusan Anda</mat-label>
+        <mat-select matNativeControl name="jurusan" id="jurusan" [(ngModel)]="hero.jurusan">
+          <mat-option value="Ilmu Komunikasi">
+            Ilmu Komunikasi
+            </mat-option>
+          </mat-select>
+      </mat-form-field>
+  
+    <mat-form-field appearance="outline">
+    <mat-label>Mata Kuliah Anda</mat-label>
+      <input matInput placeholder="Ketik Matkul anda" name="kuliah" id="kuliah" [(ngModel)]="hero.kuliah" />
+    </mat-form-field>
+  
+    <mat-form-field appearance="outline">
+      <mat-label>Dosen Pilihan Anda</mat-label>
+      <input matInput placeholder="Ketik nama dosen anda" name="dosen" id="dosen" [(ngModel)]="hero.dosen" />
+     </mat-form-field>
+     
+    <mat-form-field appereance="outline">
+      <mat-label>Semester Anda</mat-label>
+      <mat-select matNativeControl name="semester" id="semester" [(ngModel)]="hero.semester">
+        <mat-option value="Semester 1">
+          Semester 1
+        </mat-option>
+        <mat-option value="Semester 2">
+          Semester 2
+        </mat-option>
+        <mat-option value="Semester 3">
+          Semester 3
+        </mat-option>
+        <mat-option value="Semester 4">
+          Semester 4
+        </mat-option>
+        <mat-option value="Semester 5">
+          Semester 5
+        </mat-option>
+        <mat-option value="Semester 6">
+          Semester 6
+        </mat-option>
+        <mat-option value="Semester 7">
+          Semester 7
+        </mat-option>
+        <mat-option value="Semester 8">
+          Semester 8
+        </mat-option>
+      </mat-select>
+      </mat-form-field>
+  
+    <mat-form-field appereance="outline">
+      <mat-label>Tahun Akademik anda</mat-label>
+      <input matInput placeholder="Ketik tahun akademik anda" name="angkatan" id="angkatan" [(ngModel)]="hero.angkatan" />
+      </mat-form-field>
+  
+  
+    <div class="buttons">
+      <div *ngIf="update">
+        <button mat-raised-button color="warn" (click)="deleteHero()">
+          delete
+        </button>
+        <button mat-raised-button color="primary" (click)="updateHero()">
+          update
+        </button>
+      </div>
+      <div *ngIf="!update">
+        <button mat-raised-button (click)="postHero()" color="primary">
+          post
+        </button>
+      </div>
+    </div>
+  <br />
+</mat-tab>
+<mat-tab label="Teknik Informatika">
+  <h1></h1>
+  <mat-form-field appearance="outline">
+    <mat-label>Jurusan Anda</mat-label>
+      <mat-select matNativeControl name="jurusan" id="jurusan" [(ngModel)]="hero.jurusan">
+        <mat-option value="Teknik Informatika">
+          Teknik Informatika
+          </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+  <mat-form-field appearance="outline">
+  <mat-label>Mata Kuliah Anda</mat-label>
+    <input matInput placeholder="Ketik Matkul anda" name="kuliah" id="kuliah" [(ngModel)]="hero.kuliah" />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Dosen Pilihan Anda</mat-label>
+    <input matInput placeholder="Ketik nama dosen anda" name="dosen" id="dosen" [(ngModel)]="hero.dosen" />
+   </mat-form-field>
+   
+  <mat-form-field appereance="outline">
+    <mat-label>Semester Anda</mat-label>
+    <mat-select matNativeControl name="semester" id="semester" [(ngModel)]="hero.semester">
+      <mat-option value="Semester 1">
+        Semester 1
+      </mat-option>
+      <mat-option value="Semester 2">
+        Semester 2
+      </mat-option>
+      <mat-option value="Semester 3">
+        Semester 3
+      </mat-option>
+      <mat-option value="Semester 4">
+        Semester 4
+      </mat-option>
+      <mat-option value="Semester 5">
+        Semester 5
+      </mat-option>
+      <mat-option value="Semester 6">
+        Semester 6
+      </mat-option>
+      <mat-option value="Semester 7">
+        Semester 7
+      </mat-option>
+      <mat-option value="Semester 8">
+        Semester 8
+      </mat-option>
+    </mat-select>
+    </mat-form-field>
+
+  <mat-form-field appereance="outline">
+    <mat-label>Tahun Akademik anda</mat-label>
+    <input matInput placeholder="Ketik tahun akademik anda" name="angkatan" id="angkatan" [(ngModel)]="hero.angkatan" />
+    </mat-form-field>
+
+
+  <div class="buttons">
+    <div *ngIf="update">
+      <button mat-raised-button color="warn" (click)="deleteHero()">
+        delete
+      </button>
+      <button mat-raised-button color="primary" (click)="updateHero()">
+        update
+      </button>
+    </div>
+    <div *ngIf="!update">
+      <button mat-raised-button (click)="postHero()" color="primary">
+        post
+      </button>
+    </div>
+  </div>
+</mat-tab>
+<mat-tab label="Sistem Informatika">
+  <h1></h1>
+  <mat-form-field appearance="outline">
+    <mat-label>Jurusan Anda</mat-label>
+      <mat-select matNativeControl name="jurusan" id="jurusan" [(ngModel)]="hero.jurusan">
+        <mat-option value="Sistem Informatika">
+          Sistem Informatika
+          </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+  <mat-form-field appearance="outline">
+  <mat-label>Mata Kuliah Anda</mat-label>
+    <input matInput placeholder="Ketik Matkul anda" name="kuliah" id="kuliah" [(ngModel)]="hero.kuliah" />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Dosen Pilihan Anda</mat-label>
+    <input matInput placeholder="Ketik nama dosen anda" name="dosen" id="dosen" [(ngModel)]="hero.dosen" />
+   </mat-form-field>
+   
+  <mat-form-field appereance="outline">
+    <mat-label>Semester Anda</mat-label>
+    <mat-select matNativeControl name="semester" id="semester" [(ngModel)]="hero.semester">
+      <mat-option value="Semester 1">
+        Semester 1
+      </mat-option>
+      <mat-option value="Semester 2">
+        Semester 2
+      </mat-option>
+      <mat-option value="Semester 3">
+        Semester 3
+      </mat-option>
+      <mat-option value="Semester 4">
+        Semester 4
+      </mat-option>
+      <mat-option value="Semester 5">
+        Semester 5
+      </mat-option>
+      <mat-option value="Semester 6">
+        Semester 6
+      </mat-option>
+      <mat-option value="Semester 7">
+        Semester 7
+      </mat-option>
+      <mat-option value="Semester 8">
+        Semester 8
+      </mat-option>
+    </mat-select>
+    </mat-form-field>
+
+  <mat-form-field appereance="outline">
+    <mat-label>Tahun Akademik anda</mat-label>
+    <input matInput placeholder="Ketik tahun akademik anda" name="angkatan" id="angkatan" [(ngModel)]="hero.angkatan" />
+    </mat-form-field>
+
+
+  <div class="buttons">
+    <div *ngIf="update">
+      <button mat-raised-button color="warn" (click)="deleteHero()">
+        delete
+      </button>
+      <button mat-raised-button color="primary" (click)="updateHero()">
+        update
+      </button>
+    </div>
+    <div *ngIf="!update">
+      <button mat-raised-button (click)="postHero()" color="primary">
+        post
+      </button>
+    </div>
+  </div>
+</mat-tab>
+
+<mat-tab label="Manajemen">
+  <h1></h1>
+  <mat-form-field appearance="outline">
+    <mat-label>Jurusan Anda</mat-label>
+      <mat-select matNativeControl name="jurusan" id="jurusan" [(ngModel)]="hero.jurusan">
+        <mat-option value="Manajemen">
+          Manajemen
+          </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+  <mat-form-field appearance="outline">
+  <mat-label>Mata Kuliah Anda</mat-label>
+    <input matInput placeholder="Ketik Matkul anda" name="kuliah" id="kuliah" [(ngModel)]="hero.kuliah" />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Dosen Pilihan Anda</mat-label>
+    <input matInput placeholder="Ketik nama dosen anda" name="dosen" id="dosen" [(ngModel)]="hero.dosen" />
+   </mat-form-field>
+   
+  <mat-form-field appereance="outline">
+    <mat-label>Semester Anda</mat-label>
+    <mat-select matNativeControl name="semester" id="semester" [(ngModel)]="hero.semester">
+      <mat-option value="Semester 1">
+        Semester 1
+      </mat-option>
+      <mat-option value="Semester 2">
+        Semester 2
+      </mat-option>
+      <mat-option value="Semester 3">
+        Semester 3
+      </mat-option>
+      <mat-option value="Semester 4">
+        Semester 4
+      </mat-option>
+      <mat-option value="Semester 5">
+        Semester 5
+      </mat-option>
+      <mat-option value="Semester 6">
+        Semester 6
+      </mat-option>
+      <mat-option value="Semester 7">
+        Semester 7
+      </mat-option>
+      <mat-option value="Semester 8">
+        Semester 8
+      </mat-option>
+    </mat-select>
+    </mat-form-field>
+
+  <mat-form-field appereance="outline">
+    <mat-label>Tahun Akademik anda</mat-label>
+    <input matInput placeholder="Ketik tahun akademik anda" name="angkatan" id="angkatan" [(ngModel)]="hero.angkatan" />
+    </mat-form-field>
+
+
+  <div class="buttons">
+    <div *ngIf="update">
+      <button mat-raised-button color="warn" (click)="deleteHero()">
+        delete
+      </button>
+      <button mat-raised-button color="primary" (click)="updateHero()">
+        update
+      </button>
+    </div>
+    <div *ngIf="!update">
+      <button mat-raised-button (click)="postHero()" color="primary">
+        post
+      </button>
+    </div>
+  </div>
+</mat-tab>
+
+  
+</form>
+</mat-tab-group>
