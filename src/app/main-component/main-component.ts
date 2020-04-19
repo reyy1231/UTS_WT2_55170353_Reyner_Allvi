@@ -3,12 +3,14 @@ import { Hero } from '../hero';
 import { DataService } from '../data.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { FormBuilder , FormGroup} from '@angular/forms';
 @Component({
   selector: 'app-hero-form',
   templateUrl: './main-component.html',
   styleUrls: ['./main-component.scss']
 })
 export class HeroFormComponent implements OnInit {
+  myForm: FormGroup;
   hero: Hero = {
     jurusan: '',
   _id: '',
@@ -20,12 +22,12 @@ export class HeroFormComponent implements OnInit {
   id = null;
   error = false;
   update = true;
-
   constructor(
     private _snackBar: MatSnackBar,
     private ds: DataService,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private fb: FormBuilder,
   ) { }
   openSnackBar(message: string, action: string) {
     this._snackBar.open(message, action, {
@@ -34,6 +36,15 @@ export class HeroFormComponent implements OnInit {
   }
 
   ngOnInit(): void {
+     this.myForm = this.fb.group({
+      jurusan: '',
+      _id: '',
+      kuliah: '',
+      dosen: '',
+      semester: '',
+      angkatan:'',
+     })
+    
     this.route.paramMap.subscribe(params => {
       // jika ada parameter id di URL
       if (params.get('id')) {
@@ -51,6 +62,7 @@ export class HeroFormComponent implements OnInit {
       } else {
         this.update = false;
       }
+      this.myForm.valueChanges.subscribe(console.log)
     });
   }
 
